@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,7 +20,9 @@ public class tictac1 extends AppCompatActivity implements View.OnClickListener {
     private int player1Points;
     private int player2Points;
 
-    private static int HScoreMP = MainActivity.getMpHScoreMain();
+    private static int HScoreMP1 = MainActivity.getMpHScoreMain1();
+    private static int HScoreMP2 = MainActivity.getMpHScoreMain2();
+    private static int HScoreMP3 = MainActivity.getMpHScoreMain3();
 
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
@@ -124,8 +127,15 @@ public class tictac1 extends AppCompatActivity implements View.OnClickListener {
         if (player2Points>0){
             player2Points = 0;
         }
-        if(player1Points > HScoreMP) {
-            HScoreMP = player1Points;
+        if(player1Points > HScoreMP1) {
+            HScoreMP1 = player1Points;
+            MainActivity.HScoreMP1 = player1Points;
+        } else if(player1Points > HScoreMP2) {
+            HScoreMP2 = player1Points;
+            MainActivity.HScoreMP2 = player1Points;
+        } else if(player1Points > HScoreMP3) {
+            HScoreMP3 = player1Points;
+            MainActivity.HScoreMP3 = player1Points;
         }
         updatePointsText();
         resetBoard();
@@ -137,15 +147,31 @@ public class tictac1 extends AppCompatActivity implements View.OnClickListener {
         if (player1Points>0){
             player1Points = 0;
         }
-        if(player2Points > HScoreMP) {
-            HScoreMP = player2Points;
+        if(player2Points > HScoreMP1) {
+            HScoreMP1 = player2Points;
+            MainActivity.HScoreMP1 = player2Points;
+
+        } else if(player2Points > HScoreMP2) {
+            HScoreMP2 = player2Points;
+            MainActivity.HScoreMP2 = player2Points;
+
+        } else if(player2Points > HScoreMP3) {
+            HScoreMP3 = player2Points;
+            MainActivity.HScoreMP3 = player2Points;
+
         }
         updatePointsText();
         resetBoard();
     }
 
-    public static int getMpHScore(){
-        return HScoreMP;
+    public static int getMpHScore1(){
+        return HScoreMP1;
+    }
+    public static int getMpHScore2(){
+        return HScoreMP2;
+    }
+    public static int getMpHScore3(){
+        return HScoreMP3;
     }
 
 
@@ -155,8 +181,8 @@ public class tictac1 extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText("Player 1: " + player1Points);
-        textViewPlayer2.setText("Player 2: " + player2Points);
+        textViewPlayer1.setText("X: " + player1Points);
+        textViewPlayer2.setText("O: " + player2Points);
     }
 
     private void resetBoard() {
@@ -197,5 +223,10 @@ public class tictac1 extends AppCompatActivity implements View.OnClickListener {
         player1Turn = savedInstanceState.getBoolean("player1Turn");
     }
 
+    public void send(){
+        Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("methodName","myMethod");
+        startActivity(i);
+    }
 
 }

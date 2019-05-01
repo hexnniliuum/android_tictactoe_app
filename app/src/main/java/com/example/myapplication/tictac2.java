@@ -26,7 +26,9 @@ public class tictac2 extends AppCompatActivity implements View.OnClickListener {
     private int player1Points;
     private int player2Points;
 
-    private static int HScoreSP = MainActivity.getSpHScoreMain();
+    private static int HScoreSP1 = MainActivity.getSpHScoreMain1();
+    private static int HScoreSP2 = MainActivity.getSpHScoreMain2();
+    private static int HScoreSP3 = MainActivity.getSpHScoreMain2();
 
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
@@ -169,15 +171,25 @@ public class tictac2 extends AppCompatActivity implements View.OnClickListener {
         if (player2Points > 0){
             player2Points = 0;
         }
-        if(player1Points > HScoreSP){
-            HScoreSP = player1Points;
+        if(player1Points > HScoreSP1){
+            HScoreSP1 = player1Points;
+        }else if(player1Points > HScoreSP2){
+            HScoreSP2 = player1Points;
+        }else if(player1Points > HScoreSP3){
+            HScoreSP3 = player1Points;
         }
         updatePointsText();
         resetBoard();
     }
 
-    public static int getSpHScore(){
-        return HScoreSP;
+    public static int getSpHScore1(){
+        return HScoreSP1;
+    }
+    public static int getSpHScore2(){
+        return HScoreSP2;
+    }
+    public static int getSpHScore3(){
+        return HScoreSP3;
     }
 
     private void player2Wins() {
@@ -185,6 +197,16 @@ public class tictac2 extends AppCompatActivity implements View.OnClickListener {
         Toast.makeText(this, "Computer wins!", Toast.LENGTH_SHORT).show();
         if (player1Points>0){
             player1Points = 0;
+        }
+        if(player1Points > HScoreSP1) {
+            HScoreSP1 = player1Points;
+            MainActivity.HScoreSP1 = player1Points;
+        } else if(player1Points > HScoreSP2) {
+            HScoreSP2 = player1Points;
+            MainActivity.HScoreSP2 = player1Points;
+        } else if(player1Points > HScoreSP3) {
+            HScoreSP3 = player1Points;
+            MainActivity.HScoreSP3 = player1Points;
         }
         updatePointsText();
         resetBoard();
@@ -196,7 +218,7 @@ public class tictac2 extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText("Player 1: " + player1Points);
+        textViewPlayer1.setText("Player: " + player1Points);
         textViewPlayer2.setText("Computer: " + player2Points);
     }
 

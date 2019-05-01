@@ -8,37 +8,77 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:text="Offline Mode"
+        android:layout_marginTop="100dp"
+        android:text="Singleplayer Mode"
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ohs1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="High score: 0"
+        android:layout_marginTop="10dp"
+        android:text="1st Highest score: 0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ohs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ohs1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="2nd Highest score: 0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ohs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ohs2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="3rd Highest score: 0"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView2"
+        android:layout_below="@id/ohs3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:text="Multiplayer Mode"
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/mhs1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView3"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+        android:text="High score: 0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mhs2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mhs1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="High score: 0"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mhs3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mhs2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:text="High score: 0"
         android:textSize="18sp" />
 </RelativeLayout>

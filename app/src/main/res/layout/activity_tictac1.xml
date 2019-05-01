@@ -16,7 +16,7 @@ tools:context=".tictac1">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:freezesText="true"
-            android:text="Player 1: 0"
+            android:text="X: 0"
             android:textSize="30sp" />
 
         <TextView
@@ -25,7 +25,7 @@ tools:context=".tictac1">
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_view_p1"
             android:freezesText="true"
-            android:text="Player 2: 0"
+            android:text="O: 0"
             android:textSize="30sp" />
 
         <Button
@@ -52,7 +52,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/button_01"
@@ -60,7 +61,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/button_02"
@@ -68,7 +70,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
     </LinearLayout>
 
@@ -83,7 +86,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/button_11"
@@ -91,7 +95,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/button_12"
@@ -99,7 +104,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
     </LinearLayout>
 
@@ -114,7 +120,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/button_21"
@@ -122,7 +129,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
         <Button
             android:id="@+id/button_22"
@@ -130,7 +138,8 @@ tools:context=".tictac1">
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:freezesText="true"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            android:background="@drawable/button"/>
 
     </LinearLayout>
 

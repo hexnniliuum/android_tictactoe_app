@@ -10,7 +10,7 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TicTac1"
+        android:text="Multiplayer"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"/>
 
@@ -18,7 +18,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TicTac2"
+        android:text="Singleplayer"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_below="@id/button1"/>
@@ -40,5 +40,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:layout_below="@id/button3"/>
+
+    <Button
+        android:id="@+id/savestate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save State"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/button4"/>
 
 </RelativeLayout>
